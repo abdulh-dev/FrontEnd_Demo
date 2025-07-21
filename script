@@ -1,0 +1,142 @@
+Absolutely! Here's a **step-by-step script** you can follow for a clean, impressive walkthrough of your demo. This guide assumes you're showcasing a **pre-recorded or live interaction** between a frontend chat UI and your FastAPI backend.
+
+---
+
+## 🎬 DEMO SCRIPT: CSV Chat Assistant with Visuals + Model Summary
+
+---
+
+### 🟢 **1. Opening (Context for Viewers)**
+
+> "Hi everyone! In this short demo, I’ll show you a smart assistant that can analyze and summarize stock data — specifically from a CSV of SPY's daily price action — with simple natural language queries. All responses are hardcoded for this demo, but they simulate what real-time processing would look like."
+
+---
+
+### 🟨 **2. Prompt: `describe dataset`**
+
+**Narration**:
+
+> "Let's start by asking the assistant to describe the dataset."
+
+**Type in UI**:
+
+```
+describe dataset
+```
+
+**Result**:
+
+* You’ll see a **styled table** with summary statistics (mean, std, min, etc.).
+* Followed by a bullet-style explanation:
+
+  * “Mean of Open is 422.45...”
+  * “Standard deviation shows daily variability...”
+
+**Narration**:
+
+> "Here we get a statistical overview of each column in the CSV. And below, the assistant provides a plain-English breakdown of what these numbers mean for each feature."
+
+---
+
+### 🟨 **3. Prompt: `show correlation matrix`**
+
+**Narration**:
+
+> "Now, let’s ask it to show the correlation between the features."
+
+**Type in UI**:
+
+```
+show correlation matrix
+```
+
+**Result**:
+
+* Shows the `fake_corr.png` image.
+* Caption:
+
+  > 📊 Correlation matrix — This shows the strength of linear relationships between variables.
+
+**Narration**:
+
+> "This image helps us identify which columns move together. For example, 'Open' and 'Close' might be highly correlated — as expected in financial data."
+
+---
+
+### 🟨 **4. Prompt: `plot close price over time`**
+
+**Narration**:
+
+> "Next, we’ll visualize how SPY’s closing price has changed over time."
+
+**Type in UI**:
+
+```
+plot close price over time
+```
+
+**Result**:
+
+* Displays `fake_line.png`.
+* Caption:
+
+  > 📈 Close price over time — This visual shows how SPY’s closing price fluctuated daily.
+
+**Narration**:
+
+> "This gives us an intuitive view of long-term trends and potential volatility zones in the market."
+
+---
+
+### 🟨 **5. Prompt: `train model`**
+
+**Narration**:
+
+> "Let’s try something more intelligent — training a model."
+
+**Type in UI**:
+
+```
+train model
+```
+
+**Result**:
+
+* Text block with:
+
+  * R² = 1.000
+  * MAE = 0.581
+  * Explanation of the model and metrics
+
+**Narration**:
+
+> "Here the assistant simulates training a Linear Regression model that predicts the closing price using opening, high, and low prices. The metrics — like R² and MAE — are explained clearly so any user can understand how the model performs."
+
+---
+
+### 🟥 **6. Prompt: `help` or anything unrecognized**
+
+**Type in UI**:
+
+```
+help
+```
+
+**Result**:
+🤔 I only understand: `'describe dataset'`, `'show correlation matrix'`, `'plot close price over time'`, `'train model'`.
+
+**Narration**:
+
+> "And finally, if a user types something it doesn’t recognize, the assistant politely lists the supported queries."
+
+---
+
+## ✅ Final Wrap-Up
+
+**Narration**:
+
+> "That concludes the demo! Everything you saw was powered by a FastAPI backend returning precomputed responses — including tables, images, and ML summaries. In a real version, these responses could be generated dynamically from any uploaded CSV."
+
+> "Thanks for watching!"
+
+---
